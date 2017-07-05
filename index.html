@@ -1,0 +1,74 @@
+<html >
+  <head>
+    <meta charset="utf-8">
+    <title>Function to handle updates in realtime</title>
+    <script id="sortedUpdate" type="text/x-handlebars-template">
+    <b>Sorted by last updated:</b>
+    <table border=2>
+      <tr >
+        <th> Id </th>
+        <th> Name </th>
+        <th> Price </th>
+        <th> Last Updated </th>
+        <th> Last Executed </th>
+        <th> Tags </th>
+      </tr>
+        {{#each sortupdate}}
+        <tr>
+          <td> {{id}}</td>
+          <td> {{name}}</td>
+          <td> {{price}}</td>
+          <td> {{datetimes.updated}}</td>
+          <td> {{datetimes.lastexecuted}}</td>
+          <td> {{tags}}</td>
+              </tr>
+        {{/each}}
+
+    </table>
+  </script>
+
+  <script id="executeupdate" type="text/x-handlebars-template">
+
+    <b>Sorted by last executed:</b>
+    <table border=2>
+      <tr >
+        <th> Id </th>
+        <th> Name </th>
+        <th> Price </th>
+        <th> Last Updated </th>
+        <th> Last Executed </th>
+        <th> Tags </th>
+      </tr>
+        {{#each executeupdate}}
+        <tr>
+          <td> {{id}}</td>
+          <td> {{name}}</td>
+          <td> {{price}}</td>
+          <td> {{datetimes.updated}}</td>
+          <td> {{datetimes.lastexecuted}}</td>
+          <td> {{tags}}</td>
+              </tr>
+        {{/each}}
+
+    </table>
+  </script>
+
+  <div id="sUpdate"></div>
+  <div id="eUpdate"></div>
+
+
+
+
+  </head>
+  <body>
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+
+        <script src="app.js"> </script>
+
+  </body>
+</html>
